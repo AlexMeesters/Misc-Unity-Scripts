@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+//Made by Alex Meesters, www.alexmeesters.nl / www.low-scope.com
+//Licence: CC0 - https://creativecommons.org/share-your-work/public-domain/cc0/
+
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
