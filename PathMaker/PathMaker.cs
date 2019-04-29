@@ -18,7 +18,8 @@ public class PathMaker : MonoBehaviour
         "0 means the next point has to be parrallel. 90 means it is perpendicular.")]
     [SerializeField] private float maxAllowedAngleOffset = 120;
 
-    [Tooltip("How much height is taken into concideration in comparison of other axis. (2 = Two times as much)")]
+    [Tooltip("How much height is taken into concideration in comparison of other axis. (2 = Two times as much)," +
+        "Having a higher value means it will prioritze height over the x and z axis.")]
     [SerializeField] private float heightWeight = 0.25f;
 
     private float maxAllowedDot;
