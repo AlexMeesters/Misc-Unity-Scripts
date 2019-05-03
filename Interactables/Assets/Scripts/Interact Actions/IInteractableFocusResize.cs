@@ -6,9 +6,9 @@ public class IInteractableFocusResize : MonoBehaviour, IInteractable
 {
     public void Interact() {}
 
-    public void InteractionFocus(bool focussed)
+    public void InteractionFocus(bool focused)
     {
-        var scale = (focussed) ? 0.75f : 0.5f;
+        var scale = (focused) ? 0.75f : 0.5f;
         transform.localScale = new Vector3(scale, scale, scale);
     }
 }
