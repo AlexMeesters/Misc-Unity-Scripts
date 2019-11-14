@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using UniRx;
 using UniRx.Triggers;
 
-public class QuickPool : MonoBehaviour
+public class SimplePool : MonoBehaviour
 {
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     private static void CreateInstance()
