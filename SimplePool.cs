@@ -36,8 +36,6 @@ public class SimplePool : MonoBehaviour
             inactiveObjects.Add(resource, inactiveObjectPool);
         }
 
-        Debug.Log($"Active object count: {inactiveObjectPool?.Count}");
-
         if (inactiveObjectPool.Count == 0)
         {
             Transform instance = GameObject.Instantiate(resource).transform;
