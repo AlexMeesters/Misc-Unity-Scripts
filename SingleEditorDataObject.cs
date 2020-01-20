@@ -51,7 +51,7 @@ abstract public class SingleEditorDataObject<T> : ScriptableObject where T : Scr
         }
 
         // Try to load the file if it does exist.
-        T loadInstance = EditorGUIUtility.Load(typeName) as T;
+        T loadInstance = EditorGUIUtility.Load($"{typeName}.asset") as T;
         instance = loadInstance;
         return loadInstance;
     }
