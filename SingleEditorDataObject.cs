@@ -46,6 +46,7 @@ abstract public class SingleEditorDataObject<T> : ScriptableObject where T : Scr
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
             instance = createInstance;
+            (instance as SingleEditorDataObject<T>).OnCreated();
             return createInstance;
         }
 
@@ -54,4 +55,6 @@ abstract public class SingleEditorDataObject<T> : ScriptableObject where T : Scr
         instance = loadInstance;
         return loadInstance;
     }
+
+    protected virtual void OnCreated() { }
 }
