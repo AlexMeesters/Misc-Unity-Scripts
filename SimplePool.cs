@@ -14,12 +14,12 @@ public class SimplePool : MonoBehaviour
     {
         if (instance == null)
         {
-            instance = new GameObject("Quickpool").AddComponent<QuickPool>();
+            instance = new GameObject("Quickpool").AddComponent<SimplePool>();
             GameObject.DontDestroyOnLoad(instance.gameObject);
         }
     }
 
-    private static QuickPool instance;
+    private static SimplePool instance;
 
     private Dictionary<GameObject, List<Transform>> inactiveObjects = new Dictionary<GameObject, List<Transform>>();
 
