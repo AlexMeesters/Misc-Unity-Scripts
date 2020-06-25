@@ -11,7 +11,7 @@ using UnityEngine;
 // DO NOTE: Please backup your files before executing these commands, it is a destructive action.
 
 // TextureScale class is based off https://wiki.unity3d.com/index.php/TextureScale by Author: Eric Haines (Eric5h5)
-// And converted to C# by another user. Everything except for the TextureScale class is made by me.
+// And converted to C# by another user. Everything except for the TextureScale class is made by me. (Alex Meesters)
 // Licence https://creativecommons.org/licenses/by-sa/3.0/
 
 public class ResizeTextures : MonoBehaviour
