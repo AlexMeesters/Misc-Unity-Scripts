@@ -80,25 +80,6 @@ public class ResizeTextures : MonoBehaviour
         Resize(tex, xSize, ySize, assetPath);
     }
 
-    static void SetTextureImporterFormat(Texture2D texture, bool isReadable, int scale)
-    {
-        if (null == texture) return;
-
-        string assetPath = AssetDatabase.GetAssetPath(texture);
-        var tImporter = AssetImporter.GetAtPath(assetPath) as TextureImporter;
-        if (tImporter != null)
-        {
-            tImporter.textureType = TextureImporterType.Sprite;
-            tImporter.filterMode = FilterMode.Point;
-            tImporter.isReadable = isReadable;
-            tImporter.spritePixelsPerUnit = scale * 100;
-            tImporter.textureCompression = TextureImporterCompression.Uncompressed;
-
-            AssetDatabase.ImportAsset(assetPath);
-            AssetDatabase.Refresh();
-        }
-    }
-
     static void Resize(Texture2D source, int newWidth, int newHeight, string path)
     {
         Debug.Log(path.Replace(Application.dataPath, "Assets"));
