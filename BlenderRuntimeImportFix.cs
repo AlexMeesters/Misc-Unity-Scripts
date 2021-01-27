@@ -1,7 +1,7 @@
 // CC0, use as you like
 // If you work with .blend files directly (also added check for sketchup), and save them during runtime. You notice any meshcollider
 // Stops working. This is a band aid for that issue.
-// Install the Editor Coroutines package to use.
+// Install the Editor Coroutines package to use. Also do not forget to place this script in a folder that starts with "Editor"
 
 using System.Collections;
 using System.Collections.Generic;
