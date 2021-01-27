@@ -13,7 +13,7 @@ public class BlenderRuntimeImportFix : AssetPostprocessor
 {
     void OnPostprocessModel(GameObject g)
     {
-        if ((assetPath.Contains(".blend") || assetPath.Contains(".skp")) && Application.isPlaying)
+        if (Application.isPlaying && (assetPath.Contains(".blend") || assetPath.Contains(".skp")))
         {
             EditorCoroutineUtility.StartCoroutine(RefreshMeshColliders(), this);
         }
