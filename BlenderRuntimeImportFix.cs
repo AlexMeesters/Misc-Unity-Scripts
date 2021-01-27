@@ -1,7 +1,7 @@
-// CC0, use as you like.
-// If you work with .blend files directly, and save them during runtime. You notice any MeshCollider using the mesh
-// stops working. This is a band aid for that issue. Install the 'Editor Coroutines' package to use.
-// Make sure to place this in a folder named Editor, else you will experience build issues.
+
+// If you work with .blend files directly, and save them during runtime. You notice any meshcollider
+// Stops working. This is a band aid for that issue.
+// Install the Editor Coroutines package to use.
 
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ public class BlenderRuntimeImportFix : AssetPostprocessor
 {
     void OnPostprocessModel(GameObject g)
     {
-        if (assetPath.Contains(".blend") && Application.isPlaying)
+        if ((assetPath.Contains(".blend") || assetPath.Contains(".skp")) && Application.isPlaying)
         {
             EditorCoroutineUtility.StartCoroutine(RefreshMeshColliders(), this);
         }
